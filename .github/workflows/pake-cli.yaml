@@ -43,20 +43,20 @@ on:
         required: false
         type: boolean
         default: false
-      multi_arch:
-        description: '[MultiArch, Optional, MacOS only]'
-        required: false
-        type: boolean
-        default: false
-      targets:
-        description: '[Targets, Optional, Linux only]'
-        required: false
-        default: 'deb'
-        type: choice
-        options:
-          - 'deb'
-          - 'appimage'
-          - 'all'
+      # multi_arch:
+      #   description: '[MultiArch, Optional, MacOS only]'
+      #   required: false
+      #   type: boolean
+      #   default: false
+      # targets:
+      #   description: '[Targets, Optional, Linux only]'
+      #   required: false
+      #   default: 'deb'
+      #   type: choice
+      #   options:
+      #     - 'deb'
+      #     - 'appimage'
+      #     - 'all'
 
 jobs:
   build:
@@ -136,9 +136,10 @@ jobs:
           WIDTH: ${{ inputs.width }}
           HIDE_TITLE_BAR: ${{ inputs.hide_title_bar }}
           FULLSCREEN: ${{ inputs.fullscreen }}
-          RESIZE: ${{ inputs.resize }}
-          MULTI_ARCH: ${{ inputs.multi_arch }}
-          TARGETS: ${{ inputs.targets }}
+          ALWAYS_ON_TOP: ${{ inputs.always-on-top }}
+          # RESIZE: ${{ inputs.resize }}
+          # MULTI_ARCH: ${{ inputs.multi_arch }}
+          # TARGETS: ${{ inputs.targets }}
 
       - name: Upload archive
         uses: actions/upload-artifact@v3
