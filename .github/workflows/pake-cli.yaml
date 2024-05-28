@@ -38,11 +38,11 @@ on:
         required: false
         type: boolean
         default: false
-      hide_title_bar:
-        description: '[Hide TitleBar, Optional, MacOS only]'
-        required: false
-        type: boolean
-        default: false
+      # hide_title_bar:
+      #   description: '[Hide TitleBar, Optional, MacOS only]'
+      #   required: false
+      #   type: boolean
+      #   default: false
       # multi_arch:
       #   description: '[MultiArch, Optional, MacOS only]'
       #   required: false
@@ -134,12 +134,12 @@ jobs:
           ICON: ${{ inputs.icon }}
           HEIGHT: ${{ inputs.height }}
           WIDTH: ${{ inputs.width }}
-          HIDE_TITLE_BAR: ${{ inputs.hide_title_bar }}
+          HIDE_TITLE_BAR: false
           FULLSCREEN: ${{ inputs.fullscreen }}
           ALWAYS_ON_TOP: ${{ inputs.always-on-top }}
-          # RESIZE: ${{ inputs.resize }}
-          # MULTI_ARCH: ${{ inputs.multi_arch }}
-          # TARGETS: ${{ inputs.targets }}
+          RESIZE: ${{ inputs.resize }}
+          MULTI_ARCH: false
+          TARGETS: 'all'
 
       - name: Upload archive
         uses: actions/upload-artifact@v3
