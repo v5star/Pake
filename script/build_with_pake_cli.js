@@ -14,6 +14,8 @@ console.log('icon: ', process.env.ICON);
 console.log('height: ', process.env.HEIGHT);
 console.log('width: ', process.env.WIDTH);
 console.log('hide-title-bar: ', process.env.HIDE_TITLE_BAR);
+console.log('always-on-top: ', process.env.ALWAYS_ON_TOP);
+console.log('fullscreen: ', process.env.FULLSCREEN);
 console.log('resize: ', process.env.RESIZE);
 console.log('is multi arch? only for Mac: ', process.env.MULTI_ARCH);
 console.log('targets type? only for Linux: ', process.env.TARGETS);
@@ -28,6 +30,9 @@ if (process.env.HIDE_TITLE_BAR === 'true') {
 
 if (process.env.FULLSCREEN === 'true') {
   params = `${params} --resize`;
+}
+if (process.env.ALWAYS_ON_TOP === 'true') {
+  params = `${params} --always-on-top`;
 }
 
 if (process.env.MULTI_ARCH === 'true') {
