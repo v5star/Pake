@@ -28,6 +28,16 @@ on:
         description: '[Height, Optional]'
         required: false
         default: '780'
+      always-on-top:
+        description: '[always-on-top, Optional]'
+        required: false
+        type: boolean
+        default: false
+      fullscreen:
+        description: '[fullscreen, Optional]'
+        required: false
+        type: boolean
+        default: false
       hide_title_bar:
         description: '[Hide TitleBar, Optional, MacOS only]'
         required: false
