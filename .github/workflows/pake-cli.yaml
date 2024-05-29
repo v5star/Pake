@@ -16,10 +16,7 @@ on:
         required: true
       name:
         description: '[Name]'
-        required: true
-      nameZh:
-        description: '[NAME_ZH]'
-        required: true
+        required: true     
       icon:
         description: '[Icon, Optional]'
         required: false
@@ -133,15 +130,14 @@ jobs:
           node ./script/build_with_pake_cli.js
         env:
           URL: ${{ inputs.url }}
-          NAME: ${{ inputs.name }}
-          NAME_ZH: ${{ inputs.nameZh }}
+          NAME: ${{ inputs.name }}       
           ICON: ${{ inputs.icon }}
           HEIGHT: ${{ inputs.height }}
           WIDTH: ${{ inputs.width }}
           HIDE_TITLE_BAR: false
           FULLSCREEN: ${{ inputs.fullscreen }}
           ALWAYS_ON_TOP: ${{ inputs.always-on-top }}
-          RESIZE: ${{ inputs.resize }}
+          # RESIZE: ${{ inputs.resize }}
           MULTI_ARCH: false
           TARGETS: 'all'
 
