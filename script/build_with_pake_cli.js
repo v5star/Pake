@@ -10,7 +10,7 @@ console.log('\n=======================\n');
 console.log('Pake parameters is: ');
 console.log('url: ', process.env.URL);
 console.log('name: ', process.env.NAME);
-console.log('name_zh: ', process.env.NAME_ZH);
+// console.log('name_zh: ', process.env.NAME_ZH);
 console.log('icon: ', process.env.ICON);
 console.log('height: ', process.env.HEIGHT);
 console.log('width: ', process.env.WIDTH);
