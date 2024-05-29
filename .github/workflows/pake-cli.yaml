@@ -17,6 +17,9 @@ on:
       name:
         description: '[Name]'
         required: true
+      nameZh:
+        description: '[NAME_ZH]'
+        required: true
       icon:
         description: '[Icon, Optional]'
         required: false
@@ -131,6 +134,7 @@ jobs:
         env:
           URL: ${{ inputs.url }}
           NAME: ${{ inputs.name }}
+          NAME_ZH: ${{ inputs.nameZh }}
           ICON: ${{ inputs.icon }}
           HEIGHT: ${{ inputs.height }}
           WIDTH: ${{ inputs.width }}
