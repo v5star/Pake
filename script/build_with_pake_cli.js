@@ -10,6 +10,7 @@ console.log('\n=======================\n');
 console.log('Pake parameters is: ');
 console.log('url: ', process.env.URL);
 console.log('name: ', process.env.NAME);
+console.log('name_zh: ', process.env.NAME_ZH);
 console.log('icon: ', process.env.ICON);
 console.log('height: ', process.env.HEIGHT);
 console.log('width: ', process.env.WIDTH);
@@ -19,6 +20,7 @@ console.log('fullscreen: ', process.env.FULLSCREEN);
 console.log('resize: ', process.env.RESIZE);
 console.log('is multi arch? only for Mac: ', process.env.MULTI_ARCH);
 console.log('targets type? only for Linux: ', process.env.TARGETS);
+
 console.log('===========================\n');
 
 cd('node_modules/pake-cli');
