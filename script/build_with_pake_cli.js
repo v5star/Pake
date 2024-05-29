@@ -29,7 +29,9 @@ let params = `node cli.js ${process.env.URL} --name ${process.env.NAME} --height
 if (process.env.HIDE_TITLE_BAR === 'true') {
   params = `${params} --hide-title-bar`;
 }
-
+if (process.env.NAME_ZH != '') {
+  params = `${params} --nameZh ${process.env.NAME_ZH}`;
+}
 if (process.env.FULLSCREEN === 'true') {
   params = `${params} --fullscreen`;
 }
